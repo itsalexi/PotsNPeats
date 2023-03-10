@@ -13,23 +13,29 @@
     font-size: 6em;
     color: #e5ffa0;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    z-index: 999;
 }
 
 .button-manager {
     display: flex;
     flex-direction: column;
+    z-index: 999;
 }
 
 .left-tree {
     height: 72em;
     position: fixed;
-    bottom: -5%;
+    bottom: -20%;
     left: -10%;
+}
+
+.ui-elements {
+    padding-top: 5em;
 }
 .right-tree {
     height: 68em;
     position: fixed;
-    bottom: -2%;
+    bottom: -20%;
     right: -8.5%;
 }
 
@@ -59,7 +65,6 @@
 
 .menu-button {
     height: 10em;
-    width: 25em;
     background: none;
     border: none;
 }
@@ -78,9 +83,94 @@
 
 .cocopeatblocks {
     position: fixed;
-    height: 10em;
+    height: 8em;
     bottom: 0;
-    left: 15%;
+}
+
+.ui-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    flex: 1;
+    height: 100%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .right-tree {
+        display: none;
+    }
+
+    html {
+        font-size: 60%;
+    }
+    .left-tree {
+        bottom: -5%;
+        left: -25%;
+        height: 120em;
+    }
+    .menu-button {
+        height: 10em;
+    }
+    .App {
+        display: block;
+    }
+
+    .button-manager {
+        position: fixed;
+        top: 35%;
+        right: 0;
+    }
+    .cocopeatblocks {
+        left: 58%;
+        height: 12em;
+    }
+    .drop-coconut {
+        height: 20em;
+        left: 2em;
+    }
+
+    .ui-elements {
+        padding-top: 2em;
+    }
+    .title {
+        font-size: 10em;
+    }
+    .coir-pot {
+        height: 32em;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .right-tree {
+        display: none;
+    }
+
+    html {
+        font-size: 60%;
+    }
+    .left-tree {
+        bottom: -5%;
+        height: 90em;
+        left: -50%;
+    }
+    .menu-button {
+        height: 7em;
+    }
+    .App {
+        display: block;
+    }
+
+    .button-manager {
+        position: fixed;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .cocopeatblocks {
+        left: 33%;
+    }
+    .drop-coconut {
+        left: 2em;
+    }
 }
 
 @-webkit-keyframes bounce-in-top {
